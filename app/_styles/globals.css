@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .rdp-day_button {
+    transition: all !important;
+    transition-duration: 0.15s !important;
+  }
+
+  .rdp-day_button:hover {
+    background-color: theme("colors.accent.500") !important;
+    color: theme("colors.primary.800") !important;
+  }
+
+  .rdp-day_button:hover > * {
+    transform: scale(110%) !important;
+  }
+
+  .rdp-dropdown option {
+    background-color: theme("colors.primary.900") !important;
+    color: theme("colors.primary.100") !important;
+  }
+
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme('colors.primary.900');
+    border-right-color: theme('colors.primary.200');
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme('colors.primary.200');
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+/* For data picker */
+
+
+.rdp-root {
+  --rdp-day-height: 32px !important;
+  --rdp-day-width: 32px !important;
+  --rdp-day_button-height: 32px !important;
+  --rdp-day_button-width: 32px !important;
+  --rdp-accent-color: theme("colors.accent.500") !important;
+  --rdp-accent-background-color: theme("colors.accent.600") !important;
+  --rdp-range_middle-color: theme("colors.primary.800") !important;
+  --rdp-range_start-color: theme("colors.primary.800") !important;
+  --rdp-range_end-color: theme("colors.primary.800") !important;
+  margin: 0 !important;
+}
+
+
